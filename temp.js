@@ -75,7 +75,7 @@ const getTokens = async (role) => {
   }
 };
 
-const joinCall = async (role) => {
+export const joinCall = async (role) => {
   rtc.client.setClientRole(role);
   if (role === "host") {
     var url = new URL(window.location.href);

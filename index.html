@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.4.0.js"></script>
+    <script src="./js/agora-rtm-sdk-1.4.1.js"></script>
+    <script src="./script.js"></script>
+    <title>Agora Try</title>
+  </head>
+  <body>
+    <div>
+      <button onClick="joinCall('host')">Join as Host</button>
+      <!-- <button onClick="joinCall('audience')">Join as Audience</button> -->
+      <button onClick="leaveCall()">Leave</button>
+      <button onClick="toggleAudio()" id="audioBtn">Mute Audio</button>
+      <button onClick="toggleVideo()" id="videoBtn">Mute Video</button>
+      <br />
+      <button onClick="shareScreen()">Share Screen</button>
+      <button onClick="stopShareScreen()">Stop Screen Share</button>
+      <br />
+      <button onClick="sendChannelMessage()">Send Message</button>
+
+      <h4>Local video</h4>
+      <div id="me"></div>
+      <h4>Remote video</h4>
+      <div id="remote-container"></div>
+      <div id="chat">
+        <h1>Chats</h1>
+      </div>
+    </div>
+  </body>
+</html>
